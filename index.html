@@ -291,6 +291,13 @@
         transform: rotateY(180deg);
       }
 
+      .navbar-toggler {
+        background-color: transparent;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-10px); }
@@ -308,13 +315,29 @@
         <a class="navbar-brand text-white fw-bold fs-4" href="#">
           <span style="color: var(--daily-bugle-red);">DAILY</span> BUGLE
         </a>
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link text-white" href="#home">Home</a>
-          <a class="nav-link text-white" href="#about">About</a>
-          <a class="nav-link text-white" href="#portfolio">Stories</a>
-          <a class="nav-link text-white" href="#resume">Resume</a>
-          <a class="nav-link text-white" href="#articles">Articles</a>
-          <a class="nav-link text-white" href="#contact">Contact</a>
+        <!-- Tombol burger -->
+        <button
+          class="navbar-toggler text-white border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Isi navigasi -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link text-white" href="#home">Home</a>
+            <a class="nav-link text-white" href="#about">About</a>
+            <a class="nav-link text-white" href="#portfolio">Stories</a>
+            <a class="nav-link text-white" href="#resume">Resume</a>
+            <a class="nav-link text-white" href="#articles">Articles</a>
+            <a class="nav-link text-white" href="#contact">Contact</a>
+          </div>
         </div>
       </div>
     </nav>
